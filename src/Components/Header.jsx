@@ -1,21 +1,34 @@
 import React from "react";
+import styled from "styled-components";
+import { Link, withRouter } from "react-router-dom";
+import "../static/css/Header.css";
+import logo from "../static/images/netflixlogo.png";
 
+const SLink = styled(Link)``;
 // eslint-disable-next-line
-export default () => {
-  <header>
-    <ul>
-      <li>
-        <a href="/">Home</a>
+export default withRouter(({ location: { pathname } }) => (
+  <header className="nav_header">
+    <ul className="nav_ul">
+      <li className="nav_list" current={pathname === "/"}>
+        <SLink to="/" className="link">
+          <img src={logo} alt="logo" className="logo" />
+        </SLink>
       </li>
-      <li>
-        <a href="/movie">Movie</a>
+      <li className="nav_list" current={pathname === "/movie"}>
+        <SLink to="/movie" className="link">
+          Movie
+        </SLink>
       </li>
-      <li>
-        <a href="/tv">TV</a>
+      <li className="nav_list" current={pathname === "/tv"}>
+        <SLink to="/tv" className="link">
+          TV Show
+        </SLink>
       </li>
-      <li>
-        <a href="/serch">Search</a>
+      <li className="nav_list" current={pathname === "/search"}>
+        <SLink to="/search" className="link">
+          Search
+        </SLink>
       </li>
     </ul>
-  </header>;
-};
+  </header>
+));
