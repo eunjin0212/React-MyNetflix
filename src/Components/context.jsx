@@ -3,7 +3,7 @@ import React, { useState, useContext } from "react";
 const DefaultContext = React.createContext();
 
 const DefaultContextProvider = ({ children }) => {
-  const [movie, setMovie] = useState({
+  const [movie, setMovies] = useState({
     nowPlaying: null,
     upcoming: null,
     popular: null,
@@ -13,12 +13,13 @@ const DefaultContextProvider = ({ children }) => {
     popular: null,
     airingToday: null,
   });
-  const [detail, setDetail] = useState([]);
+  const [details, setDetails] = useState([]);
+
   return (
     <DefaultContext.Provider
       value={{
-        data: { movie, tv, detail },
-        fn: { setMovie, setTv, setDetail },
+        data: { movie, tv, details },
+        fn: { setMovies, setTv, setDetails },
       }}
     >
       {children}

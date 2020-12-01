@@ -7,28 +7,29 @@ import logo from "../static/images/netflixlogo.png";
 const SLink = styled(Link)``;
 // eslint-disable-next-line
 export default withRouter(({ location: { pathname } }) => (
-  <header className="nav_header">
-    <ul className="nav_ul">
-      <li className="nav_list" current={pathname === "/"}>
-        <SLink to="/" className="link">
+  <div>
+    <header className="nav_header">
+      <ul className="nav_ul">
+        <li className="nav_list">
           <img src={logo} alt="logo" className="logo" />
-        </SLink>
-      </li>
-      <li className="nav_list" current={pathname === "/movie"}>
-        <SLink to="/movie" className="link">
-          Movie
-        </SLink>
-      </li>
-      <li className="nav_list" current={pathname === "/tv"}>
-        <SLink to="/tv" className="link">
-          TV Show
-        </SLink>
-      </li>
-      <li className="nav_list" current={pathname === "/search"}>
-        <SLink to="/search" className="link">
-          Search
-        </SLink>
-      </li>
-    </ul>
-  </header>
+        </li>
+
+        <li className="nav_list" current={pathname === "/"}>
+          <SLink to="/" className="link">
+            Movie
+          </SLink>
+        </li>
+        <li className="nav_list" current={pathname === "/tv"}>
+          <SLink to="/tv" className="link">
+            TV Show
+          </SLink>
+        </li>
+        <li className="nav_list" current={pathname === "/search"}>
+          <SLink to="/search" className="link">
+            Search
+          </SLink>
+        </li>
+      </ul>
+    </header>
+  </div>
 ));

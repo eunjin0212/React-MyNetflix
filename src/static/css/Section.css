@@ -1,0 +1,24 @@
+.section {
+    width: 100%;
+    height: 100%;
+}
+
+.section:last-child {
+    margin-top: 50px
+}
+
+.section_title {
+    color: #E5E5E5;
+    font-size: 25px;
+    margin: 10px 15px 0px;
+}
+
+.section_child {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 170px);
+    grid-gap: 15px;
+    justify-content: space-between;
+    grid-auto-columns: 10px;
+    overflow: hidden;
+}

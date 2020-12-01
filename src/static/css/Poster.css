@@ -1,0 +1,44 @@
+.poster-container {
+    font-size: 12px;
+}
+
+.poster-image_container {
+    margin-bottom: 5px;
+    position: relative;
+
+
+}
+
+.poster_image {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.1s linear;
+    border-radius: 4px;
+}
+
+.poster-image_container :hover {
+    opacity: 0.3;
+}
+
+.poster-image_container :hover~.poster-rating {
+    opacity: 1;
+}
+
+.poster-title {
+    display: block;
+
+}
+
+.poster-year {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.poster-rating {
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+
+}
